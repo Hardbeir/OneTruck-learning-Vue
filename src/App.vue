@@ -1,59 +1,19 @@
 <script setup>
 
-import { CheckCircleIcon } from '@heroicons/vue/24/solid'
-import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
+import TheHeader from './components/TheHeader.vue'
+import TheNav from './components/TheNav.vue'
 
 
 </script>
 
 <template>
 
-<header class="sticky top-0 z-20 flex items-center justify-between border-b bg-white p-3">
-
-    <a href="">
-
-        <img src="./assets/" alt="logo" class="h-9">
-
-    </a>
-
-    <a href="#" class="text-sm">
-        <div v-if="false" class="flex items-center gap-1">
-
-            Day complete!
-
-            <CheckCircleIcon class="h-7 text-green-500"/>
-
-        </div>
-
-        <div v-else class="flex items-center gap-1">
-            <div>Progress: <span class="font-mono">20%</span></div>
-
-            <div class="h-3 w-3 rounded-full bg-red-500"></div>
-        </div>
-       
-    </a>
-
-</header>
+    <TheHeader/>
 
 <main class="flex flex-grow flex-col">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate aliquam architecto delectus voluptatum quibusdam voluptatem obcaecati provident facilis! Aspernatur tempore nulla est ratione debitis totam cumque esse dolor rerum possimus, quam, rem vitae quidem dolorum qui non quia perferendis aperiam reprehenderit tenetur corrupti. Nulla explicabo laborum, eius id dolores, a fugiat quaerat iusto adipisci esse ipsam aliquid? Possimus voluptates aspernatur accusantium. Reprehenderit illo dolores, itaque quo, magnam voluptates nostrum eum aliquid quia iusto esse ullam. Fuga assumenda illum, obcaecati quidem asperiores minus. Quis labore molestias, consequatur officia error consectetur ab quia impedit id vitae iste consequuntur nam in eos voluptatum dignissimos iusto distinctio assumenda ipsum alias, aliquid minima aspernatur. Debitis commodi cupiditate itaque delectus voluptatum minima consequuntur, reiciendis explicabo ducimus sunt quae, doloremque molestias quia provident harum a dolorem nulla. Vitae est, voluptate molestias aliquid dolore cupiditate asperiores totam ipsa incidunt quasi repellendus! Delectus dolores repellat harum unde! Ducimus alias dolorem quis culpa ea est nobis dignissimos in nostrum assumenda sint nemo exercitationem temporibus iste illo laborum, itaque perferendis accusantium voluptas aliquid blanditiis modi? Consectetur, quod tempore sunt non itaque ut dignissimos, ex possimus fuga maxime, cupiditate laudantium! Rem voluptatibus porro dolorem, corporis, atque nulla animi, necessitatibus nemo consequuntur consequatur perferendis quia. Impedit perferendis error nesciunt excepturi dolorum ea iusto expedita maxime rem voluptates, tempore molestias saepe veniam quisquam dolorem obcaecati fugiat sequi molestiae harum dolores? Debitis ducimus minus eaque temporibus ipsam repellat tenetur quasi. Tempora eveniet suscipit vel animi dolore odio nostrum soluta aperiam corporis magni quae odit alias obcaecati accusantium libero voluptas, quis inventore pariatur doloribus reprehenderit magnam a? Doloremque voluptatem voluptatum mollitia neque sed deserunt nisi nemo! Nesciunt atque magni illum non nihil debitis aspernatur aliquam ipsam distinctio sequi dolorem id qui asperiores consequatur fuga voluptatibus sapiente, obcaecati dicta accusamus, enim, libero quod ipsa totam. Ratione molestias culpa omnis aspernatur commodi quam reprehenderit corporis officia assumenda totam quo rem fuga nobis nihil illo numquam quod minus laborum aliquam ipsam unde velit placeat, debitis veritatis. Libero, molestiae similique corporis velit aspernatur nemo, consequuntur consequatur neque modi optio maiores placeat, saepe minima. Provident voluptatem quaerat corrupti fugiat, beatae similique quidem rem dicta ullam maiores nemo et harum impedit fuga perferendis assumenda nam optio architecto id. Excepturi eum error sapiente dolorem rem repellat vel consectetur, dignissimos corporis sequi quas modi voluptate dolore eveniet ex asperiores. Quos nihil iure voluptatem eius quas ullam fugiat ab illum perspiciatis nobis nulla eligendi accusantium delectus dignissimos provident laboriosam harum aperiam est, cupiditate voluptatibus nostrum aliquid praesentium, reprehenderit earum. Adipisci est ex incidunt voluptate aliquam magnam, numquam perferendis officiis quos accusantium. Suscipit dignissimos, sapiente, pariatur quo modi quaerat repellendus id cum cupiditate sunt eius corrupti, iure dolore quisquam excepturi. Illum temporibus hic perspiciatis deserunt placeat, dolor consequuntur totam earum. Velit obcaecati fuga voluptate, quasi repellat animi nihil quis, quam blanditiis ipsa, numquam temporibus consectetur cupiditate asperiores voluptatum earum cumque ad veniam amet tenetur itaque. Natus dolorum impedit cumque hic mollitia corporis dolor, voluptatem aperiam reprehenderit architecto repellat id unde dignissimos nulla! Ea debitis laudantium esse!
 </main>
 
-<nav class="sticky bottom-0 z-10 bg-white">
-    <ul class="flex items-center justify-around border-t">
-        <li class="flex-1"><a class="flex flex-col items-center p-2 text-xs capitalize" href="#timeline">
-            <ClockIcon class="h-6 w-6"/>
-            TimeLine
-        </a></li>
-        <li class="flex-1"><a class="flex flex-col items-center p-2 text-xs capitalize" href="#activities">
-            <ListBulletIcon class="h-6 w-6"/>
-            Activities
-        </a></li>
-        <li class="flex-1"><a class="flex flex-col items-center p-2 text-xs capitalize" href="#progress">
-            <ChartBarIcon class="h-6 w-6"/>
-            Progress
-        </a></li>
-    </ul>
-</nav>
+    <TheNav/>
 
 </template>
 
