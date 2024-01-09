@@ -1,6 +1,11 @@
+<script setup>
+
+import {PAGE_TIMELINE} from '../constants'
+
+</script>
 <template>
     
-    <a href="">
+    <a :href="`#${PAGE_TIMELINE}`">
 
 <img src="" alt="logo" class="h-9">
 
