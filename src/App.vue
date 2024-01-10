@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 
+import { normalizePageHash, generateTimelineItems } from './function';
+
 import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from './constants'
 
 import TheHeader from './components/TheHeader.vue'
@@ -10,24 +12,10 @@ import TheTimeline from './pages/TheTimeline.vue';
 import TheActivities from './pages/TheActivities.vue';
 import TheProgress from './pages/TheProgress.vue';
 
+const timelineItems = generateTimelineItems()
 
 const currentPage = ref(normalizePageHash())
 
-function normalizePageHash() {
-    const hash = window.location.hash.slice(1)
-
-    if([PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE].includes(hash)) {
-
-        return hash
-
-    }
-
-    window.location.hash = PAGE_TIMELINE
-
-    return PAGE_TIMELINE
-
-
-}
 
 function goTo(page) {
 
@@ -46,7 +34,7 @@ function goTo(page) {
 
 <main class="flex flex-grow flex-col">
 
-    <TheTimeline v-show="currentPage === PAGE_TIMELINE" />
+    <TheTimeline v-show="currentPage === PAGE_TIMELINE" :timeline-items="timelineItems" />
     <TheActivities v-show="currentPage === PAGE_ACTIVITIES" />
     <TheProgress v-show="currentPage === PAGE_PROGRESS"/>
 
