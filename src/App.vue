@@ -28,8 +28,7 @@ function goTo(page) {
 <template>
 
     <TheHeader 
-    @go-to-timeline="goTo(PAGE_TIMELINE)"
-    @go-to-progress="goTo(PAGE_PROGRESS)"
+        @navigate="goTo($event)"
     />
 
 <main class="flex flex-grow flex-col">
