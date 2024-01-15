@@ -1,10 +1,6 @@
 import { 
     PAGE_TIMELINE, 
-<<<<<<< HEAD
     HOURS_IN_DAY ,
-=======
-    HOURS_IN_DAY,
->>>>>>> bdd51f6ce37f76fbc2c840f85211017f8679a9e8
     MIDNIGHT_HOUR
 } from './constants'
 import { isPageValid } from './validators'
