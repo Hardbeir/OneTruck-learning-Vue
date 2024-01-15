@@ -13,7 +13,7 @@ defineProps({
         validator: isPageValid
     }
 
-})
+});
 
 const emit = defineEmits({
     navigate: isPageValid

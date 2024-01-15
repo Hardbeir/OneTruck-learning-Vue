@@ -6,9 +6,17 @@ export function isPageValid(page) {
 
 }
 
+export function validateTimelineItems(timelineItems){
+    return timelineItems.every(isTimelineItemValid)
+}
+
 export function isTimelineItemValid({hour}){
 
+<<<<<<< HEAD
     return isHourValid(hour)
+=======
+    return typeof hour === 'number' && hour >= MIDNIGHT_HOUR && hour < HOURS_IN_DAY
+>>>>>>> bdd51f6ce37f76fbc2c840f85211017f8679a9e8
 
 }
 
@@ -16,6 +24,7 @@ export function validateSelectOptions(options){
     return options.every(isSelectOptionValid)
 }
 
+<<<<<<< HEAD
 function isSelectOptionValid({value, label}) {
     return isNumber(value) && isString(label)
 }
@@ -50,4 +59,13 @@ function isBetween(value, start, end){
 
 function isHourValid(hour) {
     return isNumber(hour) && isBetween(hour, MIDNIGHT_HOUR, HOURS_IN_DAY - 1)
+=======
+    return options.every(isSelectOptionValid)
+
+}
+
+function isSelectOptionValid({value, label}){
+
+    return typeof value ==='number' && typeof label =='string'
+>>>>>>> bdd51f6ce37f76fbc2c840f85211017f8679a9e8
 }
