@@ -1,4 +1,4 @@
-import { HOURS_IN_DAY, NAV_ITEMS } from "./constants";
+import { HOURS_IN_DAY, NAV_ITEMS, MIDNIGHT_HOUR } from "./constants";
 
 export function isPageValid(page) {
 
@@ -8,12 +8,46 @@ export function isPageValid(page) {
 
 export function isTimelineItemValid({hour}){
 
-    return typeof hour === 'number' && hour >= 0 && hour < HOURS_IN_DAY
+    return isHourValid(hour)
 
 }
 
-export function isBaseSelect(options){
+export function validateSelectOptions(options){
+    return options.every(isSelectOptionValid)
+}
 
-    return options.every(({value, label}) => typeof value ==='number' && typeof label =='string')
+function isSelectOptionValid({value, label}) {
+    return isNumber(value) && isString(label)
+}
 
+export function isUndefindeOrNull(value){
+    return isUndefined(value) || isNull(value)
+}
+
+export function isNumberOrNull (value) {
+        return isNumber(value) || isNull(value)
+}
+
+function isNull(value){
+    return value === null
+}
+
+function isUndefined(value){
+    return value === undefined
+}
+
+function isNumber(value){
+    return typeof value === 'number'
+}
+
+function isString(label) {
+    return typeof label =='string'
+}
+
+function isBetween(value, start, end){
+    return value >= start && value <= end
+}
+
+function isHourValid(hour) {
+    return isNumber(hour) && isBetween(hour, MIDNIGHT_HOUR, HOURS_IN_DAY - 1)
 }
